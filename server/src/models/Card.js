@@ -1,11 +1,11 @@
-const { Sequelize, Model, DataTypes } = require("sequelize");
-const db = require("../db/config");
+const { db } = require("../db/config");
+const { DataTypes } = require("sequelize");
 
 const Card = db.define("Card", {
-  cardId: DataTypes.INTEGER,
   name: DataTypes.STRING,
   mojo: DataTypes.INTEGER,
   stamina: DataTypes.INTEGER,
   imgUrl: DataTypes.STRING,
 });
-module.exports = Card;
+
+module.exports = { Card };
